@@ -18,7 +18,7 @@ A Fun Music Bot Made In discord.js
 # Bot Information
 * Discord Framework : [discord.js](https://discord.js.org/)<br>
 * Hosted On : [Glitch](https://glitch.com)<br>
-* Invite link : [Here](https://discord.com/oauth2/authorize?client_id=732807386414317658&scope=bot&permissions=11889985)<br>
+* Invite link : [Here](https://discord.com/oauth2/authorize?client_id=732807386414317658&scope=bot&permissions=137755969)<br>
 * Support Server Link : [Here](https://discord.gg/kpMyn55)
 
 # TODO
