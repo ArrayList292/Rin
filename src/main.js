@@ -55,7 +55,7 @@ class Function {
             })
         );
 
-        dispatcher.setVolume(0.03)
+        dispatcher.setVolume(0.3)
 
         let playEmbed = new Discord.MessageEmbed()
             .setColor(9472474)
@@ -78,7 +78,7 @@ class Function {
         data.dispatcher = dispatcher;
 
         dispatcher.on("finish", (reason) => {
-            if (queue.get(guild.id).loop !== undefined && queue.get(guild.id).loop) {
+            if (queue.get(guild.id) !== undefined && queue.get(guild.id).loop) {
                 queue.get(guild.id).musics[queue.get(guild.id).musics.length] = queue.get(guild.id).musics[0];
                 queue.get(guild.id).musics.shift();
                 this.playMusic(guild);
