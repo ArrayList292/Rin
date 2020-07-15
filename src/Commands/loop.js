@@ -16,7 +16,7 @@ exports.run = (client, msg, args, options) => {
 
     if (!options.queue.get(msg.guild.id)) { return msg.channel.send(error1); }
 
-    if(options.queue.get(msg.guild.id).voiceConnection.channel.id !== msg.member.voice.channel.id) { return msg.channel.send(error2); }
+    if(msg.member.voice.channel.id == null || options.queue.get(msg.guild.id).voiceConnection.channel.id == null || options.queue.get(msg.guild.id).voiceConnection.channel.id !== msg.member.voice.channel.id) { return msg.channel.send(error2); }
 
     let success1 = new Discord.MessageEmbed()
         .setDescription(`The queue will ${options.queue.get(msg.guild.id).loop ? "not be looped!" : "be looped!"}`)

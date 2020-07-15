@@ -103,8 +103,8 @@ exports.run = async (client, msg, args, options) => {
             if (!options.queue.get(msg.guild.id).dispatcher) options.functions.playMusic(msg.guild);
         }
     } else {
-        let searchResult = search(args.join(" "));
-        if (!searchResult) return msg.channel.send(error3);
+        let searchResult = await search(args.join(" "));
+        if (searchResult === undefined || !searchResult) return msg.channel.send(error3);
         let videoData = searchResult.videos[0];
         videoData.message = msg;
         options.queue.get(msg.guild.id).musics.push(videoData);

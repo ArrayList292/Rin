@@ -55,9 +55,7 @@ class Function {
             })
         );
 
-        if (data.volume) {
-            dispatcher.setVolume(data.volume / 100)
-        }
+        dispatcher.setVolume(0.03)
 
         let playEmbed = new Discord.MessageEmbed()
             .setColor(9472474)
@@ -79,22 +77,21 @@ class Function {
 
         data.dispatcher = dispatcher;
 
-        dispatcher.on("end", (reason) => {
-            let targetGuild = dispatcher.player.voice.channel.guild;
-            if (queue.get(targetGuild.id).loop) {
-                queue.get(targetGuild.id).musics[queue.get(targetGuild.id).musics.length] = queue.get(targetGuild.id).musics[0];
-                queue.get(targetGuild.id).musics.shift();
-                this.playMusic(targetGuild);
+        dispatcher.on("finish", (reason) => {
+            if (queue.get(guild.id).loop !== undefined && queue.get(guild.id).loop) {
+                queue.get(guild.id).musics[queue.get(guild.id).musics.length] = queue.get(guild.id).musics[0];
+                queue.get(guild.id).musics.shift();
+                this.playMusic(guild);
             } else {
                 if (
-                    !queue.get(targetGuild.id).musics ||
-                    queue.get(targetGuild.id).musics.length === 1
+                    !queue.get(guild.id).musics ||
+                    queue.get(guild.id).musics.length === 1
                 ) {
-                    queue.delete(targetGuild.id);
+                    queue.delete(guild.id);
                     dispatcher.player.voiceConnection.disconnect();
                 } else {
-                    queue.get(targetGuild.id).musics.shift();
-                    this.playMusic(targetGuild);
+                    queue.get(guild.id).musics.shift();
+                    this.playMusic(guild);
                 }
             }
         });
