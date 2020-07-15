@@ -23,13 +23,8 @@ A Fun Music Bot Made In discord.js
 
 # TODO
 * Clean up the code [Not Done].
-* Fix major issue [Not Done].
 * Optimise the bot if possible. [Not Done].
-* ~~Make it play a playlist [Finished \o/].~~
 * Add more feature.
-
-# Known Major Bug
-* [Some song can't be played](https://github.com/xhayper/Rin/issues/1)
 
 # Future Command
 * rin$shuffle - Shuffle the queue
