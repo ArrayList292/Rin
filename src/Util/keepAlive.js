@@ -11,4 +11,4 @@ setInterval(() => {
     http.get(`http://${process.env.PROJECT_DOMAIN}.glitch.me/`);
 }, 280000);
 
-app.listen(process.env.PORT, () => { console.log("Listening on port " + process.env.PORT) });
+app.listen(process.env.PORT, () => { console.log("[Keep Me Alive] Listening on port " + process.env.PORT) });
