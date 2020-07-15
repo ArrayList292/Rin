@@ -6,19 +6,19 @@ exports.run = (client, msg, args, options) => {
         .setDescription("I am not currently playing any song.")
         .setColor(16711681)
         .setTimestamp(Date.now())
-        .setAuthor(`Error!`, msg.author.displayAvatarURL);
+        .setAuthor(`Error!`, msg.author.avatarURL());
 
     let error2 = new Discord.MessageEmbed()
         .setDescription("You're not on the same channel as me!")
         .setColor(16711681)
         .setTimestamp(Date.now())
-        .setAuthor(`Error!`, msg.author.displayAvatarURL);
+        .setAuthor(`Error!`, msg.author.avatarURL());
 
     let error3 = new Discord.MessageEmbed()
         .setDescription("The volume has to between 0 and 100!")
         .setColor(16711681)
         .setTimestamp(Date.now())
-        .setAuthor(`Error!`, msg.author.displayAvatarURL);
+        .setAuthor(`Error!`, msg.author.avatarURL());
 
     if (!options.queue.get(msg.guild.id)) { return msg.channel.send(error1); }
 
@@ -30,7 +30,7 @@ exports.run = (client, msg, args, options) => {
         .setDescription(`Current volume is ${dispatcher.volume * 100}!`)
         .setColor(9472474)
         .setTimestamp(Date.now())
-        .setAuthor(`Current Volume`, msg.author.displayAvatarURL);
+        .setAuthor(`Current Volume`, msg.author.avatarURL());
 
     if(!args[0]) return msg.channel.send(currentVolume);
 
@@ -40,7 +40,7 @@ exports.run = (client, msg, args, options) => {
         .setDescription(`I have set the volume to ${args[0]}!`)
         .setColor(9472474)
         .setTimestamp(Date.now())
-        .setAuthor(`Success!`, msg.author.displayAvatarURL);
+        .setAuthor(`Success!`, msg.author.avatarURL());
 
     msg.channel.send(success1);
     options.queue.get(msg.guild.id).volume = args[0];

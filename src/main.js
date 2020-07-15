@@ -1,7 +1,7 @@
 require("dotenv").config();
 
 let Discord = require("discord.js"),
-    client = new Discord.Client({disableEveryone : true}),
+    client = new Discord.Client({disableMentions : "everyone"}),
     permissionConfig = require("./permissionConfig"),
     config = require("./config.json"),
     ytdl = require("ytdl-core"),
@@ -62,7 +62,7 @@ class Function {
         let playEmbed = new Discord.MessageEmbed()
             .setColor(9472474)
             .setTimestamp(Date.now())
-            .setAuthor(`Now playing`, data.musics[0].message.author.avatarURL)
+            .setAuthor(`Now playing`, data.musics[0].message.author.avatarURL())
             .setThumbnail(data.musics[0].image)
             .addField("Music Name", data.musics[0].title, true)
             .addField("Author", data.musics[0].author.name, true)

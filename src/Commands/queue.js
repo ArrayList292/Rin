@@ -5,7 +5,7 @@ let ytdl = require('ytdl-core'),
 exports.run = (client, msg, args, options) => {
 
     let error1 = new Discord.MessageEmbed()
-        .setAuthor("Error!", msg.author.displayAvatarURL)
+        .setAuthor("Error!", msg.author.avatarURL())
         .setDescription("I am not currently playing any song.")
         .setTimestamp(Date.now())
         .setColor(16711681);

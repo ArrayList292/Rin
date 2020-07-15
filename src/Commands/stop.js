@@ -6,13 +6,13 @@ exports.run = (client, msg, args, options) => {
         .setDescription("I am not currently playing any song.")
         .setColor(16711681)
         .setTimestamp(Date.now())
-        .setAuthor(`Error!`, msg.author.displayAvatarURL);
+        .setAuthor(`Error!`, msg.author.avatarURL());
 
     let error2 = new Discord.MessageEmbed()
         .setDescription("You're not on the same channel as me!")
         .setColor(16711681)
         .setTimestamp(Date.now())
-        .setAuthor(`Error!`, msg.author.displayAvatarURL);
+        .setAuthor(`Error!`, msg.author.avatarURL());
 
     if (!options.queue.get(msg.guild.id)) { return msg.channel.send(error1); }
 
@@ -22,7 +22,7 @@ exports.run = (client, msg, args, options) => {
         .setDescription("I have stopped the music.")
         .setColor(9472474)
         .setTimestamp(Date.now())
-        .setAuthor(`Success!`, msg.author.displayAvatarURL);
+        .setAuthor(`Success!`, msg.author.avatarURL());
 
     msg.channel.send(success1);
     let dispatcher = options.queue.get(msg.guild.id).dispatcher;
