@@ -7,7 +7,7 @@ app.get('/', (req, res) => {
 })
 
 setInterval(() => {
-    http.get(`https://${process.env.PROJECT_DOMAIN}.glitch.me/`);
+    http.get(`http://${process.env.PROJECT_DOMAIN}.glitch.me/`);
 }, 280000);
 
 app.listen(process.env.PORT, () => { console.log("Listening on port " + process.env.PORT) });
