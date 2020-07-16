@@ -51,7 +51,7 @@ class Function {
         let data = queue.get(guild.id);
         let dispatcher = data.voiceConnection.play(
             ytdl(data.musics[0].url, {
-                    quality: "highestaudio"
+                quality: "highestaudio"
             })
         );
 
@@ -82,17 +82,12 @@ class Function {
                 queue.get(guild.id).musics[queue.get(guild.id).musics.length] = queue.get(guild.id).musics[0];
                 queue.get(guild.id).musics.shift();
                 this.playMusic(guild);
+            } else if (queue.get(guild.id) !== undefined && queue.get(guild).musics.length > 1) {
+                queue.get(guild.id).musics.shift();
+                this.playMusic(guild);
             } else {
-                if (
-                    !queue.get(guild.id).musics ||
-                    queue.get(guild.id).musics.length === 1
-                ) {
-                    queue.delete(guild.id);
-                    dispatcher.player.voiceConnection.disconnect();
-                } else {
-                    queue.get(guild.id).musics.shift();
-                    this.playMusic(guild);
-                }
+                queue.delete(guild.id);
+                dispatcher.player.voiceConnection.disconnect();
             }
         });
     }
@@ -179,7 +174,7 @@ else glob("./Commands/*.js", (err, res) => {
 End Of Command Manager
 */
 
-// require("./Util/keepAlive.js");
+//require("./Util/keepAlive.js");
 
 /*
 Login
