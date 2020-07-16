@@ -2,7 +2,7 @@
 A Fun Music Bot Made In discord.js
 
 # Support me!
-* [Patreon](https://www.patreon.com/oldcombatsystem)
+* [Patreon](https://www.patreon.com/hayper)
 
 # Help me!
 * [Report a bug!](https://github.com/xhayper/Rin/issues/new?assignees=&labels=&template=bug_report.md&title=%5BBUG%5D)
