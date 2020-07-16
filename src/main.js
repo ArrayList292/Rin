@@ -82,7 +82,7 @@ class Function {
                 queue.get(guild.id).musics[queue.get(guild.id).musics.length] = queue.get(guild.id).musics[0];
                 queue.get(guild.id).musics.shift();
                 this.playMusic(guild);
-            } else if (queue.get(guild.id) !== undefined && queue.get(guild).musics.length > 1) {
+            } else if (queue.get(guild.id) !== undefined && queue.get(guild.id).musics.length > 1) {
                 queue.get(guild.id).musics.shift();
                 this.playMusic(guild);
             } else {
