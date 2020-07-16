@@ -87,7 +87,7 @@ A Fun Music Bot Made In discord.js
 * Then rename config.json.example to config.json and edit the file data
 * Do the same with .env.example
 * Open Command Prompt, Then type ```cd "C:\Users\%username%\Desktop\Rin-rin-master\src"``` or change directory to the bot folder.
-* Then type ```npm install``` (Only do it once)`
+* Then type ```npm install``` (Only do it once)
 * Then type ```node main.js```
 
 # FAQ
