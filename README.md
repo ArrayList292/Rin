@@ -22,8 +22,8 @@ A Fun Music Bot Made In discord.js
 * Support Server Link : [Here](https://discord.gg/kpMyn55)
 
 # TODO
-* Clean up the code [Not Done].
-* Optimise the bot if possible. [Not Done].
+* Clean up the code.
+* Optimise the bot if possible.
 * Add more feature.
 
 # Future Command
