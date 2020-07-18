@@ -16,9 +16,9 @@ A Fun Music Bot Made In discord.js
 * Power Level customizable.
 
 # Bot Information
-* Discord Framework : [discord.js](https://discord.js.org)<br>
-* Hosted On : [DigitalOcean](https://www.digitalocean.com)<br>
-* Invite link : [Here](https://discordapp.com/oauth2/authorize?client_id=732807386414317658&scope=bot&permissions=70643009)<br>
+* Discord Framework : [discord.js](https://discord.js.org)
+* Hosted On : [DigitalOcean](https://www.digitalocean.com)
+* Invite link : [Here](https://discordapp.com/oauth2/authorize?client_id=732807386414317658&scope=bot&permissions=70643009)
 * Support Server Link : [Here](https://discord.gg/kpMyn55)
 
 # TODO
@@ -65,21 +65,21 @@ A Fun Music Bot Made In discord.js
 |rin$loop     |0          |None                                                    |Loop current queue                          |rin$loop                                                                                                                                   |
 
 # Packages
-[@discordjs/opus](https://www.npmjs.com/package/@discordjs/opus)<br>
-[bufferutil](https://www.npmjs.com/package/bufferutil)<br>
-[discord.js](http://npmjs.com/package/discord.js)<br>
-[dotenv](https://www.npmjs.com/package/dotenv)<br>
-[erlpack](https://github.com/discordapp/erlpack)<br>
-[express](https://www.npmjs.com/package/express)<br>
-[ffmpeg-static](https://www.npmjs.com/package/ffmpeg-static)<br>
-[glob](https://www.npmjs.com/package/glob)<br>
-[libsodium-wrappers](https://www.npmjs.com/package/libsodium-wrappers)<br>
-[moment](https://www.npmjs.com/package/moment)<br>
-[utf-8-validate](https://www.npmjs.com/package/utf-8-validate)<br>
-[yt-search](https://www.npmjs.com/package/yt-search)<br>
-[ytdl-core](https://www.npmjs.com/package/ytdl-core)<br>
-[ytpl](https://www.npmjs.com/package/ytpl)<br>
-[zlib-sync](https://www.npmjs.com/package/zlib-sync)<br>
+[@discordjs/opus](https://www.npmjs.com/package/@discordjs/opus)
+[bufferutil](https://www.npmjs.com/package/bufferutil)
+[discord.js](http://npmjs.com/package/discord.js)
+[dotenv](https://www.npmjs.com/package/dotenv)
+[erlpack](https://github.com/discordapp/erlpack)
+[express](https://www.npmjs.com/package/express)
+[ffmpeg-static](https://www.npmjs.com/package/ffmpeg-static)
+[glob](https://www.npmjs.com/package/glob)
+[libsodium-wrappers](https://www.npmjs.com/package/libsodium-wrappers)
+[moment](https://www.npmjs.com/package/moment)
+[utf-8-validate](https://www.npmjs.com/package/utf-8-validate)
+[yt-search](https://www.npmjs.com/package/yt-search)
+[ytdl-core](https://www.npmjs.com/package/ytdl-core)
+[ytpl](https://www.npmjs.com/package/ytpl)
+[zlib-sync](https://www.npmjs.com/package/zlib-sync)
 
 # How to host?
 
