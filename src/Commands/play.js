@@ -1,5 +1,5 @@
 let ytdl = require('ytdl-core'),
-    Discord = require('discord.js'),
+    Discord = require('discord.js-light'),
     ytpl = require('ytpl'),
 search = require('yt-search');
 

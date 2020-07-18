@@ -1,5 +1,5 @@
 let ytdl = require('ytdl-core'),
-    Discord = require('discord.js'),
+    Discord = require('discord.js-light'),
     search = require('yt-search');
 
 exports.run = (client, msg, args, options) => {

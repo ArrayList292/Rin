@@ -1,6 +1,6 @@
 require("dotenv").config();
 
-let Discord = require("discord.js"),
+let Discord = require("discord.js-light"),
     client = new Discord.Client({disableMentions : "everyone"}),
     permissionConfig = require("./permissionConfig"),
     config = require("./config.json"),

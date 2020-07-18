@@ -1,7 +1,10 @@
-let Discord = require("discord.js");
+let Discord = require("discord.js-light");
 
-exports.run = (client, options, cmdArgs) => {
+exports.run = async (client, options, cmdArgs) => {
     let msg = cmdArgs[0];
+    msg.guild = await client.guilds.fetch(msg.guild.id);
+    msg.member = await msg.guild.members.fetch(msg.member.id);
+    msg.author = await client.users.fetch(msg.member.id);
     if (msg.content.startsWith(options.config.prefix) && !msg.author.bot && msg.channel.type === "text") {
 
         let error1 = new Discord.MessageEmbed()

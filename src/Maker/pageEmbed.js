@@ -1,4 +1,4 @@
-let Discord = require("discord.js");
+let Discord = require("discord.js-light");
 
 class pageEmbedMaker {
 

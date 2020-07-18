@@ -1,4 +1,4 @@
-let Discord = require("discord.js");
+let Discord = require("discord.js-light");
 
 exports.run = (client, msg, args, options) => {
 

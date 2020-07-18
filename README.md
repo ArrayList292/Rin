@@ -1,6 +1,5 @@
 # Rin
-A Fun Music Bot Made In discord.js
-
+A Fun Music Bot Made In Discord.JS-Light
 # Support me!
 * [Patreon](https://www.patreon.com/hayper)
 
@@ -16,7 +15,7 @@ A Fun Music Bot Made In discord.js
 * Power Level customizable.
 
 # Bot Information
-* Discord Framework : [discord.js](https://discord.js.org)
+* Discord Framework : [Discord.JS-Light](https://www.npmjs.com/package/discord.js-light)
 * Hosted On : [DigitalOcean](https://www.digitalocean.com)
 * Invite link : [Here](https://discordapp.com/oauth2/authorize?client_id=732807386414317658&scope=bot&permissions=70643009)
 * Support Server Link : [Here](https://discord.gg/kpMyn55)
@@ -67,7 +66,7 @@ A Fun Music Bot Made In discord.js
 # Packages
 [@discordjs/opus](https://www.npmjs.com/package/@discordjs/opus)
 [bufferutil](https://www.npmjs.com/package/bufferutil)
-[discord.js](http://npmjs.com/package/discord.js)
+[discord.js-light](https://www.npmjs.com/package/discord.js-light)
 [dotenv](https://www.npmjs.com/package/dotenv)
 [erlpack](https://github.com/discordapp/erlpack)
 [express](https://www.npmjs.com/package/express)
@@ -91,11 +90,14 @@ A Fun Music Bot Made In discord.js
 * Then type ```node main.js```
 
 # FAQ
-* Help! It said `'npm' is not recognized as an internal or external command.` or `'node' is not recognized as an internal or external command.`<br>
+* Help! It said `'npm' is not recognized as an internal or external command.` or `'node' is not recognized as an internal or external command.`
 A : Install [Node.JS](https://nodejs.org/en/).
 
-* Help! It said `Error : Cannot find module 'node-gyp'`<br>
+* Help! It said `Error : Cannot find module 'node-gyp'`
 A : Install [node-gyp](https://github.com/nodejs/node-gyp) and [windows-build-tools](https://www.npmjs.com/package/windows-build-tools).
 
-* Help! It said `Error: Invalid converter command`<br>
+* Help! It said `Error: Invalid converter command`
 A: Install [FFMPEG](https://www.ffmpeg.org/download.html), Then put the file path in PATH's System Environment Variable, Then restart your computer.
+
+* Why Discord.JS-Light?
+A: Because it reduces the ram usage, by removing caching.
