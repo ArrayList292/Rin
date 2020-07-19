@@ -14,11 +14,11 @@ client.on("debug", (debug) => {
     console.log("[DEBUG] " + debug);
 });
 
-client.on("ready", async () => {
+client.on("ready", () => {
     main = null;
     try {
         let webhook = new Discord.WebhookClient(process.env.WEBHOOK_ID, process.env.WEBHOOK_ID);
-        await webhook.send("This is for CI testing purpose.", {
+        webhook.send("This is for CI testing purpose.", {
             username: client.user.username,
             avatarURL: client.user.avatarURL({dynamic: true, size: 4096})
         });
@@ -32,8 +32,8 @@ client.on("ready", async () => {
     }
 });
 
-client.on("error", (err) => {
-    throw new Error(err);
+client.on("error", () => {
+    process.exit(1);
 })
 
 
