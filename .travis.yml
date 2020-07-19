@@ -6,6 +6,7 @@ os:
 node_js:
   - 12
 before_install:
+  - travis cache --delete
   - cd $TRAVIS_BUILD_DIR/src
   - npm config set spin false
 install:
