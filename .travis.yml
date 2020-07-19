@@ -4,12 +4,11 @@ node_js:
   - 12
 before_install:
   - cd $TRAVIS_BUILD_DIR/src
-  - sudo nvm install 12
-  - sudo npm config set spin false
+  - npm config set spin false
 install:
   - sudo rm -rf node_modules
-  - sudo npm i
-  - sudo npm i eslint -g
-  - sudo npm i babel-eslint --save-dev
+  - npm i
+  - npm i eslint -g
+  - npm i babel-eslint --save-dev
 script:
-  - sudo eslint --no-eslintrc --env node --max-warnings 1 --parser babel-eslint --parser-options=ecmaVersion:6 main.js /
+  - eslint --no-eslintrc --env node --max-warnings 1 --parser babel-eslint --parser-options=ecmaVersion:6 main.js /
