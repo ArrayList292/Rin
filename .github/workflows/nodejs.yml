@@ -2,7 +2,7 @@ name: Node.js CI
 on: [push, pull_request]
 jobs:
   build:
-    runs-on: windows
+    runs-on: windows-latest
     strategy:
       matrix:
         node-version: [12.x]
@@ -13,7 +13,8 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - run: cd %GITHUB_WORKSPACE%/src
+      - run: npm i -g eslint
       - run: npm i babel-eslint --save-dev
       - run: eslint -c package.json --max-warnings 1
-      - env:
-        CI: true
+        env:
+          CI: true
