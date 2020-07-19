@@ -1,5 +1,10 @@
 <h1 align="center">Rin</h1>
 <div align="center">
+    <a>
+        <img src="https://hayper.is-inside.me/9DWXQU2m.png" alt="Icon"/>
+    </a>
+</div>
+<div align="center">
     <a href="https://discord.gg/kpMyn55">
         <img src="https://discordapp.com/api/guilds/723434573802766357/widget.png" alt="Support Server"/>
     </a>
