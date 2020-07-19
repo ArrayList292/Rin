@@ -34,9 +34,6 @@
 * Optimise the bot if possible.
 * Add more feature.
 
-# Future Command
-* rin$shuffle - Shuffle the queue
-
 # Power Levels
 
 |Name     | Power Level | Permissions | Default? |
@@ -71,7 +68,7 @@
 |rin$queue    |0          |None                                                    |See the current queue                       |rin$queue                                                                                                                                  |
 |rin$volume   |0          |(Number {0-100})                                        |Set the volume, or get current volume       |rin$volume, rin$volume 100                                                                                                                 |
 |rin$loop     |0          |None                                                    |Loop current queue                          |rin$loop                                                                                                                                   |
-
+|rin$shuffle  |0          |None                                                    |Shuffle Current Queue                       |rin$shuffle                                                                                                                                |
 # Packages
 * [@discordjs/opus](https://www.npmjs.com/package/@discordjs/opus)
 * [bufferutil](https://www.npmjs.com/package/bufferutil)

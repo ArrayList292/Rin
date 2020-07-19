@@ -27,25 +27,26 @@ client.on("ready", () => {
             username: client.user.username,
             avatarURL: client.user.avatarURL({dynamic: true, size: 4096})
         }).then(() => {
-            client = null;
+            client.destroy();
             console.log(`[${osType[os.type()]} CI] Test successfully, Exiting with status code: 0`);
             process.exit(0);
         }).catch((e2) => {
+            client.destroy();
             console.error(e2);
-            client = null;
             console.log(`[${osType[os.type()]} CI] Test unsuccessfully, Exiting with status code: 1`);
             return process.exit(1);
         });
     } catch (e) {
+        client.destroy();
         console.error(e);
-        client = null;
         console.log(`[${osType[os.type()]} CI] Test unsuccessfully, Exiting with status code: 1`);
         return process.exit(1);
     }
 });
 
 client.on("error", () => {
-    console.log("[CI] Test unsuccessfully, Exiting with status code: 1")
+    client.destroy();
+    console.log("[CI] Test unsuccessfully, Exiting with status code: 1");
     process.exit(1);
 })
 
