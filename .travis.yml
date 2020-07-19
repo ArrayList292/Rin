@@ -1,0 +1,11 @@
+language: node_js
+os: windows
+node_js:
+  - node
+before_install:
+  - npm config set spin false
+  - npm i -g eslint
+install:
+  - rm -rf node_modules && npm i
+script:
+  - eslint -c package.json --max-warnings 1 src

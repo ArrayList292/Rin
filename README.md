@@ -1,7 +1,15 @@
-# Rin
-A Fun Music Bot Made In Discord.JS-Light
-# Support me!
-* [Patreon](https://www.patreon.com/hayper)
+<h1 align="center">WulfGang</h1>
+<div align="center">
+    <a href="https://discord.gg/kpMyn55">
+        <img src="https://discordapp.com/api/guilds/723434573802766357/widget.png" alt="Support Server"/>
+    </a>
+    <a href="https://travis-ci.com/xhayper/Rin">
+        <img src="https://travis-ci.com/xhayper/Rin.svg?branch=master" alt="Build status" #1/>
+    </a>
+    <a href="https://github.com/xhayper/Rin/actions">
+        <img src="https://github.com/xhayper/Rin/workflows/Node.js%20CI/badge.svg" alt="Build status #2">
+    </a>
+</div>
 
 # Help me!
 * [Report a bug!](https://github.com/xhayper/Rin/issues/new?assignees=&labels=&template=bug_report.md&title=%5BBUG%5D)
