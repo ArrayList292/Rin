@@ -182,3 +182,5 @@ Login
 */
 
 client.login(process.env.BOT_TOKEN);
+
+module.exports.client = client;

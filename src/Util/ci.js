@@ -27,16 +27,19 @@ client.on("ready", () => {
             username: client.user.username,
             avatarURL: client.user.avatarURL({dynamic: true, size: 4096})
         }).then(() => {
+            main.client.destroy();
             client.destroy();
             console.log(`[${osType[os.type()]} CI] Test successfully, Exiting with status code: 0`);
             process.exit(0);
         }).catch((e2) => {
+            main.client.destroy();
             client.destroy();
             console.error(e2);
             console.log(`[${osType[os.type()]} CI] Test unsuccessfully, Exiting with status code: 1`);
             return process.exit(1);
         });
     } catch (e) {
+        main.client.destroy();
         client.destroy();
         console.error(e);
         console.log(`[${osType[os.type()]} CI] Test unsuccessfully, Exiting with status code: 1`);
@@ -45,6 +48,7 @@ client.on("ready", () => {
 });
 
 client.on("error", () => {
+    main.client.destroy();
     client.destroy();
     console.log("[CI] Test unsuccessfully, Exiting with status code: 1");
     process.exit(1);
