@@ -3,6 +3,7 @@ os: windows
 node_js:
   - node
 before_install:
+  - cd src
   - npm config set spin false
   - npm i -g eslint
 install:
