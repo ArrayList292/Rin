@@ -4,7 +4,7 @@
   "description": "A fun music bot made by xhayper.",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ."
   },
   "repository": {
     "type": "git",
@@ -16,7 +16,7 @@
     "music",
     "music-bot"
   ],
-  "author": "xhayper",
+  "author": "hayper",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/xhayper/Rin/issues"
