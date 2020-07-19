@@ -19,7 +19,6 @@ client.on("debug", (debug) => {
 });
 
 client.on("ready", () => {
-    main = null;
     console.log(`[${osType[os.type()]} CI] Sending a test webhook.`)
     try {
         let webhook = new Discord.WebhookClient(process.env.WEBHOOK_ID, process.env.WEBHOOK_TOKEN);
