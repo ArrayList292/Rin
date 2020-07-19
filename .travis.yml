@@ -1,5 +1,5 @@
 language: node_js
-os: windows
+os: linux
 node_js:
   - node
 before_install:
@@ -8,5 +8,5 @@ before_install:
 install:
   - rm -rf node_modules && npm i
 script:
-  - cd src
+  - cd $TRAVIS_BUILD_DIR/src
   - eslint -c package.json --max-warnings 1 src
