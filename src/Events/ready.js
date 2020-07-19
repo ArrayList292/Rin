@@ -3,7 +3,7 @@ let moment = require("moment");
 exports.run = async (client, options, cmdArgs) => {
     client.startDate = moment();
     console.log(`[Client] Ready! Logged in as ${client.user.tag}`);
-    let status = [`music | ${options.config.prefix}`, `${client.users.cache.array().length - 2} users! | ${options.config.prefix}`];
+    let status = [`music | ${options.config.prefix}`, `you | ${options.config.prefix}`];
     function changeStatus() {
         let statusType = Math.floor(Math.random() * 2) + 1;
         if (statusType === 2) {

@@ -14,5 +14,6 @@ exports.run = (client, msg, args, options) => {
 
 exports.config = {
     category: "information",
-    powerLevel: 0
+    powerLevel: 0,
+    aliases: ["h"]
 };

@@ -13,7 +13,8 @@ Register All Collection
 */
 
 commandList = new Discord.Collection(),
-queue = new Discord.Collection();
+    aliases = new Discord.Collection(),
+    queue = new Discord.Collection();
 
 /*
 Start Of Register Functions
