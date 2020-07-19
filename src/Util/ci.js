@@ -23,20 +23,27 @@ client.on("debug", (debug) => {
 client.on("ready", () => {
     main = null;
     console.log(`[${osType[os.type()]} CI] Sending a test webhook.`)
-    let webhook = new Discord.WebhookClient(process.env.WEBHOOK_ID, process.env.WEBHOOK_TOKEN);
-    webhook.send(`${osType[os.type()]} CI's Test Webhook`, {
+    try {
+        let webhook = new Discord.WebhookClient(process.env.WEBHOOK_ID, process.env.WEBHOOK_TOKEN);
+        webhook.send(`${osType[os.type()]} CI's Test Webhook`, {
             username: client.user.username,
             avatarURL: client.user.avatarURL({dynamic: true, size: 4096})
         }).then(() => {
             client = null;
             console.log(`[${osType[os.type()]} CI] Test successfully, Exiting with status code: 0`);
             process.exit(0);
-        }).catch((e) => {
+        }).catch((e2) => {
+            console.error(e2);
+            client = null;
+            console.log(`[${osType[os.type()]} CI] Test unsuccessfully, Exiting with status code: 1`);
+            return process.exit(1);
+        });
+    } catch (e) {
         console.error(e);
         client = null;
         console.log(`[${osType[os.type()]} CI] Test unsuccessfully, Exiting with status code: 1`);
         return process.exit(1);
-    });
+    }
 });
 
 client.on("error", () => {
