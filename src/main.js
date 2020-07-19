@@ -13,7 +13,6 @@ Register All Collection
 */
 
 commandList = new Discord.Collection(),
-    aliases = new Discord.Collection(),
     queue = new Discord.Collection();
 
 /*
@@ -23,7 +22,7 @@ Start Of Register Functions
 class Function {
 
     checkPerms(member) {
-        if (!member instanceof Discord.GuildMember) return;
+        if (!(member instanceof Discord.GuildMember)) return;
         if (config.ownerList.length === 1 && config.ownerList[0] === member.user.id || config.ownerList.length > 1 && config.ownerList.includes(member.user.id)) {
             return permissionConfig["4"];
         } else if (Object.keys(permissionConfig).length <= 1) {
@@ -79,6 +78,7 @@ class Function {
         data.dispatcher = dispatcher;
 
         dispatcher.on("finish", (reason) => {
+            console.info("[Song Player] Song Finished, Reason : " + reason)
             if (queue.get(guild.id) !== undefined && queue.get(guild.id).loop) {
                 queue.get(guild.id).musics[queue.get(guild.id).musics.length] = queue.get(guild.id).musics[0];
                 queue.get(guild.id).musics.shift();

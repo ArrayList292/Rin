@@ -1,6 +1,6 @@
 let moment = require("moment");
 
-exports.run = async (client, options, cmdArgs) => {
+exports.run = async (client, options) => {
     client.startDate = moment();
     console.log(`[Client] Ready! Logged in as ${client.user.tag}`);
     let status = [`music | ${options.config.prefix}`, `you | ${options.config.prefix}`];
