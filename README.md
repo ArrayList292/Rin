@@ -82,22 +82,22 @@ A Fun Music Bot Made In Discord.JS-Light
 
 # How to host?
 
-* Download the source, Unzip it in your desktop
-* Then rename config.json.example to config.json and edit the file data
-* Do the same with .env.example
-* Open Command Prompt, Then type ```cd "C:\Users\%username%\Desktop\Rin-rin-master\src"``` or change directory to the bot folder.
-* Then type ```npm install``` (Only do it once)
-* Then type ```node main.js```
+
+1. Download the source, Unzip it in your desktop
+2. Then rename config.json.example to config.json, .env.example to .env and edit the file data
+3. Open Command Prompt, Then change directory to the bot folder.
+4. Then type ```npm install``` (Only do it once)
+5. Double click on start.bat.
 
 # FAQ
 * Help! It said `'npm' is not recognized as an internal or external command.` or `'node' is not recognized as an internal or external command.`
-A : Install [Node.JS](https://nodejs.org/en/).
+* A : Install [Node.JS](https://nodejs.org/en/).
 
 * Help! It said `Error : Cannot find module 'node-gyp'`
-A : Install [node-gyp](https://github.com/nodejs/node-gyp) and [windows-build-tools](https://www.npmjs.com/package/windows-build-tools).
+* A : Install [node-gyp](https://github.com/nodejs/node-gyp) and [windows-build-tools](https://www.npmjs.com/package/windows-build-tools).
 
 * Help! It said `Error: Invalid converter command`
-A: Install [FFMPEG](https://www.ffmpeg.org/download.html), Then put the file path in PATH's System Environment Variable, Then restart your computer.
+* A: Install [FFMPEG](https://www.ffmpeg.org/download.html), Then put the file path in PATH's System Environment Variable, Then restart your computer.
 
 * Why Discord.JS-Light?
-A: Because it reduces the ram usage, by removing caching.
+* A: Because it reduces the ram usage, by removing caching.
