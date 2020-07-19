@@ -21,10 +21,11 @@ client.on("ready", () => {
         webhook.send("This is for CI testing purpose.", {
             username: client.user.username,
             avatarURL: client.user.avatarURL({dynamic: true, size: 4096})
+        }).then(() => {
+            client = null;
+            console.log("[CI] Test successfully, Exiting with status code 0")
+            process.exit(0);
         });
-        client = null;
-        console.log("[CI] Test successfully, Exiting with status code 0")
-        process.exit(0);
     } catch (e) {
         console.error(e);
         client = null;
