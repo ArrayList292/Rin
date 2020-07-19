@@ -1,7 +1,6 @@
 let Discord = require("discord.js-light");
 
 exports.run = async (client, options, cmdArgs) => {
-
     let checkCanUse = (cI) => {
         let canUse = false;
         if (!cI.config || cI.config && cI.config.powerLevel === 0) canUse = true;
@@ -10,6 +9,7 @@ exports.run = async (client, options, cmdArgs) => {
     }
 
     let msg = cmdArgs[0];
+    if (msg.author.bot) return;
     msg.guild = await client.guilds.fetch(msg.guild.id);
     msg.member = await msg.guild.members.fetch(msg.member.id);
     msg.author = await client.users.fetch(msg.member.id);
