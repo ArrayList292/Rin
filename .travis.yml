@@ -4,7 +4,7 @@ node_js:
   - 12
 before_install:
   - cd $TRAVIS_BUILD_DIR/src
-  - sudo apt install nodejs
+  - sudo nvm install 12
   - sudo npm config set spin false
 install:
   - sudo rm -rf node_modules
