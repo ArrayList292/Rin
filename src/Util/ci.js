@@ -16,7 +16,7 @@ client.on("debug", (debug) => {
 
 client.on("ready", () => {
     main = null;
-    let webhook = new Discord.WebhookClient(process.env.WEBHOOK_ID, process.env.WEBHOOK_ID);
+    let webhook = new Discord.WebhookClient(process.env.WEBHOOK_ID, process.env.WEBHOOK_TOKEN);
     webhook.send("This is for CI testing purpose.", {
             username: client.user.username,
             avatarURL: client.user.avatarURL({dynamic: true, size: 4096})
