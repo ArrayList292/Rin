@@ -16,22 +16,20 @@ client.on("debug", (debug) => {
 
 client.on("ready", () => {
     main = null;
-    try {
-        let webhook = new Discord.WebhookClient(process.env.WEBHOOK_ID, process.env.WEBHOOK_ID);
-        webhook.send("This is for CI testing purpose.", {
+    let webhook = new Discord.WebhookClient(process.env.WEBHOOK_ID, process.env.WEBHOOK_ID);
+    webhook.send("This is for CI testing purpose.", {
             username: client.user.username,
             avatarURL: client.user.avatarURL({dynamic: true, size: 4096})
         }).then(() => {
             client = null;
             console.log("[CI] Test successfully, Exiting with status code: 0")
             process.exit(0);
-        });
-    } catch (e) {
+        }).catch((e) => {
         console.error(e);
         client = null;
         console.log("[CI] Test unsuccessfully, Exiting with status code: 1")
         return process.exit(1);
-    }
+    });
 });
 
 client.on("error", () => {
