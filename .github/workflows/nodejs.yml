@@ -12,7 +12,4 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-      - run: cd src && npm i -g eslint && npm i babel-eslint --save-dev
-      - run: cd src && eslint -c package.json --max-warnings 1
-        env:
-          CI: true
+      - run: cd src && npm i -g eslint && npm i babel-eslint --save-dev && eslint --no-eslintrc --env node --max-warnings 1 --parser babel-eslint --parser-options=ecmaVersion:6 ./
