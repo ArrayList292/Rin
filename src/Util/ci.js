@@ -2,8 +2,6 @@
 THIS FILE WAS BUILT FOR CI TO TEST IF THE SOURCE IS FUNCTION CORRECTLY.
 */
 
-require("dotenv").config();
-
 let Discord = require("discord.js-light"),
     os = require("os"),
     main = require("../main.js"),

@@ -1,4 +1,4 @@
-require("dotenv").config();
+if (!process.env.BOT_TOKEN) require("dotenv").config();
 
 let Discord = require("discord.js-light"),
     client = new Discord.Client({disableMentions : "everyone"}),
