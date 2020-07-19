@@ -1,9 +1,9 @@
-<div style="align-content: center;">
+<div style="text-align: center">
     <a href="https://top.gg/bot/732807386414317658">
         <img src="https://hayper.is-inside.me/9DWXQU2m.png" alt="Icon"/>
     </a>
 </div>
-<div style="align-content: center;">
+<div style="text-align: center">
     <a href="https://discord.gg/kpMyn55">
         <img src="https://discordapp.com/api/guilds/723434573802766357/widget.png" alt="Support Server"/>
     </a>
