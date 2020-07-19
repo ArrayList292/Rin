@@ -8,5 +8,4 @@ before_install:
 install:
   - rm -rf node_modules && npm i
 script:
-  - cd $TRAVIS_BUILD_DIR/src
-  - eslint -c package.json --max-warnings 1 src
+  - eslint -c $TRAVIS_BUILD_DIR/src/package.json --max-warnings 1 $TRAVIS_BUILD_DIR/src
