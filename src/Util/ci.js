@@ -23,17 +23,19 @@ client.on("ready", () => {
             avatarURL: client.user.avatarURL({dynamic: true, size: 4096})
         }).then(() => {
             client = null;
-            console.log("[CI] Test successfully, Exiting with status code 0")
+            console.log("[CI] Test successfully, Exiting with status code: 0")
             process.exit(0);
         });
     } catch (e) {
         console.error(e);
         client = null;
+        console.log("[CI] Test unsuccessfully, Exiting with status code: 1")
         return process.exit(1);
     }
 });
 
 client.on("error", () => {
+    console.log("[CI] Test unsuccessfully, Exiting with status code: 1")
     process.exit(1);
 })
 
