@@ -1,4 +1,3 @@
-<h1 align="center">Rin</h1>
 <div align="center">
     <a>
         <img src="https://hayper.is-inside.me/9DWXQU2m.png" alt="Icon"/>
