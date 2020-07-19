@@ -8,5 +8,5 @@ before_install:
 install:
   - rm -rf node_modules && npm i && npm i eslint -g && npm i babel-eslint --save-dev
 script:
-  - eslint index.js
+  - eslint main.js
   #- eslint -c package.json --max-warnings 1
