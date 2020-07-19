@@ -12,9 +12,6 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-      - run: cd src
-      - run: npm i -g eslint
-      - run: npm i babel-eslint --save-dev
-      - run: eslint -c package.json --max-warnings 1
+      - run: npm i -g eslint && cd src && npm i babel-eslint --save-dev && eslint -c package.json --max-warnings 1
         env:
           CI: true
