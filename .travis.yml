@@ -8,4 +8,4 @@ before_install:
 install:
   - rm -rf node_modules && npm i && npm i eslint -g && npm i babel-eslint --save-dev
 script:
-  - eslint --no-eslintrc --env node --max-warnings 1 --parser babel-eslint --parser-options=ecmaVersion:6 ./
+  - eslint --no-eslintrc --env node --max-warnings 1 --parser babel-eslint --parser-options=ecmaVersion:6 /
