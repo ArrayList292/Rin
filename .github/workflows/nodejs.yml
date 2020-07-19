@@ -12,7 +12,7 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-      - run: cd %GITHUB_WORKSPACE%/src
+      - run: cd src
       - run: npm i -g eslint
       - run: npm i babel-eslint --save-dev
       - run: eslint -c package.json --max-warnings 1
