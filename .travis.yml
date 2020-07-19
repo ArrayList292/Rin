@@ -5,6 +5,7 @@ node_js:
 before_install:
   - npm config set spin false
   - npm i -g eslint
+  - npm i -g babel-eslint
 install:
   - rm -rf node_modules && npm i
 script:
