@@ -4,9 +4,8 @@ node_js:
   - 12
 before_install:
   - npm config set spin false
-  - npm i -g eslint
-  - npm i -g babel-eslint
 install:
-  - rm -rf node_modules && npm i && npm i babel-eslint --save-dev
+  - rm -rf node_modules && npm i && npm i babel-eslint eslint --save-dev
 script:
-  - eslint -c $TRAVIS_BUILD_DIR/src/package.json --max-warnings 1 $TRAVIS_BUILD_DIR/src
+  - cd $TRAVIS_BUILD_DIR/src
+  - eslint -c package.json --max-warnings 1 src
