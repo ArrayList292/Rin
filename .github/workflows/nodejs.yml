@@ -13,4 +13,4 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - run: cd src && npm i -g eslint && npm i eslint && npm i babel-eslint --save-dev
-      - run: cd src && eslint --no-eslintrc --env node --max-warnings 1 --parser babel-eslint --parser-options=ecmaVersion:6 ./
+      - run: cd src && eslint --no-eslintrc --env node --max-warnings 1 --parser babel-eslint --parser-options=ecmaVersion:6 main.js ./
