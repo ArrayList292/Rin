@@ -1,4 +1,4 @@
-<h1 align="center">WulfGang</h1>
+<h1 align="center">Rin</h1>
 <div align="center">
     <a href="https://discord.gg/kpMyn55">
         <img src="https://discordapp.com/api/guilds/723434573802766357/widget.png" alt="Support Server"/>
