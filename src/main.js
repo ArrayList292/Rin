@@ -181,4 +181,4 @@ End Of Command Manager
 Login
 */
 
-client.login(process.env.bot_token);
+client.login(process.env.BOT_TOKEN);
