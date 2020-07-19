@@ -64,21 +64,21 @@ A Fun Music Bot Made In Discord.JS-Light
 |rin$loop     |0          |None                                                    |Loop current queue                          |rin$loop                                                                                                                                   |
 
 # Packages
-[@discordjs/opus](https://www.npmjs.com/package/@discordjs/opus)
-[bufferutil](https://www.npmjs.com/package/bufferutil)
-[discord.js-light](https://www.npmjs.com/package/discord.js-light)
-[dotenv](https://www.npmjs.com/package/dotenv)
-[erlpack](https://github.com/discordapp/erlpack)
-[express](https://www.npmjs.com/package/express)
-[ffmpeg-static](https://www.npmjs.com/package/ffmpeg-static)
-[glob](https://www.npmjs.com/package/glob)
-[libsodium-wrappers](https://www.npmjs.com/package/libsodium-wrappers)
-[moment](https://www.npmjs.com/package/moment)
-[utf-8-validate](https://www.npmjs.com/package/utf-8-validate)
-[yt-search](https://www.npmjs.com/package/yt-search)
-[ytdl-core](https://www.npmjs.com/package/ytdl-core)
-[ytpl](https://www.npmjs.com/package/ytpl)
-[zlib-sync](https://www.npmjs.com/package/zlib-sync)
+* [@discordjs/opus](https://www.npmjs.com/package/@discordjs/opus)
+* [bufferutil](https://www.npmjs.com/package/bufferutil)
+* [discord.js-light](https://www.npmjs.com/package/discord.js-light)
+* [dotenv](https://www.npmjs.com/package/dotenv)
+* [erlpack](https://github.com/discordapp/erlpack)
+* [express](https://www.npmjs.com/package/express)
+* [ffmpeg-static](https://www.npmjs.com/package/ffmpeg-static)
+* [glob](https://www.npmjs.com/package/glob)
+* [libsodium-wrappers](https://www.npmjs.com/package/libsodium-wrappers)
+* [moment](https://www.npmjs.com/package/moment)
+* [utf-8-validate](https://www.npmjs.com/package/utf-8-validate)
+* [yt-search](https://www.npmjs.com/package/yt-search)
+* [ytdl-core](https://www.npmjs.com/package/ytdl-core)
+* [ytpl](https://www.npmjs.com/package/ytpl)
+* [zlib-sync](https://www.npmjs.com/package/zlib-sync)
 
 # How to host?
 
