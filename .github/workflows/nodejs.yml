@@ -1,8 +1,8 @@
 name: Node.js CI
-on: [push]
+on: [push, pull]
 jobs:
   build:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     strategy:
       matrix:
         node-version: [12.x]
@@ -12,9 +12,7 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-      - run: cd src
-      - run: npm i -g eslint
-      - run: npm i
-      - run: eslint -c package.json --max-warnings 1 src
-        env:
-          CI: true
+      - name: Tester
+        run: cd src ; npm i ; npm i -g eslint ; eslint -c package.json --max-warnings 1 src
+      - env:
+        CI: true

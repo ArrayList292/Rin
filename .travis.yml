@@ -3,10 +3,10 @@ os: windows
 node_js:
   - node
 before_install:
-  - cd src
   - npm config set spin false
   - npm i -g eslint
 install:
   - rm -rf node_modules && npm i
 script:
+  - cd src
   - eslint -c package.json --max-warnings 1 src
