@@ -12,5 +12,11 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-      - run: cd src && npm ci
-      - run: cd src && npm test
+      - name: Update Packages
+         run: cd src && npm ci
+      - name: Test The Src
+         run: cd src && npm test
+         env:
+           BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
+           WEBHOOK_ID: ${{ secrets.WEBHOOK_ID }}
+           WEBHOOK_TOKEN: ${{ secrets.WEBHOOK_TOKEN }}
