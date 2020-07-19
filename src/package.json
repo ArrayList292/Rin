@@ -4,7 +4,8 @@
   "description": "A fun music bot made by hayper.",
   "main": "main.js",
   "scripts": {
-    "start": "node ."
+    "start": "node .",
+	"test": "node Util/ci.js"
   },
   "repository": {
     "type": "git",
