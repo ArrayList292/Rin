@@ -92,10 +92,79 @@ class Function {
             }
         });
     }
+
 }
 
 /*
 End Of Registering Function
+*/
+
+/*
+Start Of Event Manager
+*/
+
+function eventManager() {
+    if (!fs.existsSync("./Events")) fs.mkdirSync("./Events");
+    else glob("./Events/*.js", (err, res) => {
+        if (err) return console.error(err);
+        let eventAmount = res.length,
+            x = 0;
+        if (eventAmount === 0) return;
+        console.log(`[EventManager] Found ${eventAmount} events!`);
+        res.forEach(e => {
+            let event = require(e);
+            let eventName = e.replace("./Events/", "").replace(".js", "");
+            if (!event.run) return console.log(`[EventManager] Event "${eventName}" doesn't have main function, Unloading it.`);
+            client.on(eventName, (...args) => {
+                event.run(client, options, args)
+            });
+            x++;
+            console.log(`[EventManager] Event "${eventName}" has been loaded. (${x}/${eventAmount})`);
+        })
+    });
+}
+
+eventManager();
+
+/*
+End Of Event Manager
+*/
+
+/*
+Start Of Command Manager
+*/
+function commandManager() {
+    if (!fs.existsSync("./Commands")) fs.mkdirSync("./Commands");
+    else glob("./Commands/*.js", (err, res) => {
+        if (err) return console.error(err);
+        let commandAmount = res.length,
+            x = 0;
+        if (commandAmount === 0) return;
+        console.log(`[CommandManager] Found ${commandAmount} commands!`);
+        res.forEach(c => {
+            let command = require(c);
+            let commandName = c.replace("./Commands/", "").replace(".js", "");
+            if (!command.run) return console.log(`[CommandManager] Command "${commandName}" doesn't have main function, Unloading it.`);
+            x++;
+            let commandData = {
+                commandName: commandName,
+                commandInstance: command,
+                commandPath: "." + c
+            };
+            if (command.config) {
+                if (command.config.aliases) commandData.aliases = command.config.aliases;
+                commandData.config = command.config;
+            }
+            commandList.set(commandName.toLowerCase(), commandData);
+            console.log(`[CommandManager] Command "${commandName}" has been loaded. (${x}/${commandAmount})`);
+        })
+    });
+}
+
+commandManager();
+
+/*
+End Of Command Manager
 */
 
 /*
@@ -106,74 +175,19 @@ let makers = {
     embedMaker: require("./Maker/pageEmbed.js")
 };
 
+let managers = {
+    commandManager,
+    eventManager
+}
+
 let options = {
     commandList: commandList,
     queue: queue,
     config: config,
     maker: makers,
+    managers: managers,
     functions: new Function
 };
-
-/*
-Start Of Event Manager
-*/
-
-if (!fs.existsSync("./Events")) fs.mkdirSync("./Events");
-else glob("./Events/*.js", (err, res) => {
-    if (err) return console.error(err);
-    let eventAmount = res.length,
-        x = 0;
-    if (eventAmount === 0) return;
-    console.log(`[EventManager] Found ${eventAmount} events!`);
-    res.forEach(e => {
-        let event = require(e);
-        let eventName = e.replace("./Events/", "").replace(".js", "");
-        if (!event.run) return console.log(`[EventManager] Event "${eventName}" doesn't have main function, Unloading it.`);
-        client.on(eventName, (...args) => {
-            event.run(client, options, args)
-        });
-        x++;
-        console.log(`[EventManager] Event "${eventName}" has been loaded. (${x}/${eventAmount})`);
-    })
-});
-
-/*
-End Of Event Manager
-*/
-
-/*
-Start Of Command Manager
-*/
-
-if (!fs.existsSync("./Commands")) fs.mkdirSync("./Commands");
-else glob("./Commands/*.js", (err, res) => {
-    if (err) return console.error(err);
-    let commandAmount = res.length,
-        x = 0;
-    if (commandAmount === 0) return;
-    console.log(`[CommandManager] Found ${commandAmount} commands!`);
-    res.forEach(c => {
-        let command = require(c);
-        let commandName = c.replace("./Commands/", "").replace(".js", "");
-        if (!command.run) return console.log(`[CommandManager] Command "${commandName}" doesn't have main function, Unloading it.`);
-        x++;
-        let commandData = {
-            commandName: commandName,
-            commandInstance: command,
-            commandPath: "." + c
-        };
-        if (command.config) {
-            if (command.config.aliases) commandData.aliases = command.config.aliases;
-            commandData.config = command.config;
-        }
-        commandList.set(commandName.toLowerCase(), commandData);
-        console.log(`[CommandManager] Command "${commandName}" has been loaded. (${x}/${commandAmount})`);
-    })
-});
-
-/*
-End Of Command Manager
-*/
 
 //require("./Util/keepAlive.js");
 

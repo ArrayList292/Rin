@@ -36,39 +36,53 @@
 
 # Power Levels
 
-|Name     | Power Level | Permissions | Default? |
-|:--------|:-----------:|:------------|:--------:|
-|All      |0            |Anything     |Yes       |
-|Admin    |2            |Administrator|No        |
-|Bot Owner|4            |Bot Owner    |No        |
+|Name     |Power Level|Permissions  |Default?|
+|:--------|:---------:|:------------|:------:|
+|All      |0          |Anything     |Yes     |
+|Admin    |2          |Administrator|No      |
+|Bot Owner|4          |Bot Owner    |No      |
 
-* You can't change These Power Level, It's permenant.
+* You can't change These Power Level, It's permanent.
 
 # Command-List
  
-* [] = Required, () = Optinal, / = or, & = and.
+* [] = Required, () = Optional, / = or, & = and.
 
 ### Category
 
 ##### Information
 
-|Command Name |Power Level|Argument |Description                        |Example |
-|:-----------:|:---------:|:-------:|:----------------------------------|:-------|
-|rin$help     |0          |None     |Show you all of the commands       |rin$help|                
-|rin$info     |0          |None     |Show you the information of the bot|rin$info|
+|Command Name|Power Level|Argument|Description                        |Example |
+|:----------:|:---------:|:------:|:----------------------------------|:-------|
+|rin$help    |0          |None    |Show you all of the commands       |rin$help|                
+|rin$info    |0          |None    |Show you the information of the bot|rin$info|
 
 ###### Music
 
-|Command Name |Power Level|Argument                                                |Description                                 |Example                                                                                                                                    |
-|:-----------:|:---------:|:------------------------------------------------------:|:-------------------------------------------|:------------------------------------------------------------------------------------------------------------------------------------------|
-|rin$play     |0          |[Youtube Video URL/Youtube Video ID/Search String]      |Play/Add a video to the queue.              |rin$play https://www.youtube.com/watch?v=dQw4w9WgXcQ<br>rin$play dQw4w9WgXcQ<br>rin$play Rick Astley - Never Gonna Give You Up             |
-|rin$play     |0          |[Youtube Playlist URL/Youtube Playlist ID]              |Play/Add a playlist. (Same command as above)|rin$play https://www.youtube.com/watch?v=9C7IdIwUSMU&list=PLv3TTBr1W_9tppikBxAE_G6qjWdBljBHJ<br>rin$play PLv3TTBr1W_9tppikBxAE_G6qjWdBljBHJ|
-|rin$skip     |0          |None                                                    |Skip a song                                 |rin$skip                                                                                                                                   |
-|rin$stop     |0          |None                                                    |Stop the song. (Clear the queue)            |rin$stop                                                                                                                                   |
-|rin$queue    |0          |None                                                    |See the current queue                       |rin$queue                                                                                                                                  |
-|rin$volume   |0          |(Number {0-100})                                        |Set the volume, or get current volume       |rin$volume, rin$volume 100                                                                                                                 |
-|rin$loop     |0          |None                                                    |Loop current queue                          |rin$loop                                                                                                                                   |
-|rin$shuffle  |0          |None                                                    |Shuffle Current Queue                       |rin$shuffle                                                                                                                                |
+|Command Name|Power Level|Argument                                          |Description                                 |Example                                                                                                                                    |
+|:----------:|:---------:|:------------------------------------------------:|:-------------------------------------------|:------------------------------------------------------------------------------------------------------------------------------------------|
+|rin$play    |0          |[Youtube Video URL/Youtube Video ID/Search String]|Play/Add a video to the queue.              |rin$play https://www.youtube.com/watch?v=dQw4w9WgXcQ<br>rin$play dQw4w9WgXcQ<br>rin$play Rick Astley - Never Gonna Give You Up             |
+|rin$play    |0          |[Youtube Playlist URL/Youtube Playlist ID]        |Play/Add a playlist. (Same command as above)|rin$play https://www.youtube.com/watch?v=9C7IdIwUSMU&list=PLv3TTBr1W_9tppikBxAE_G6qjWdBljBHJ<br>rin$play PLv3TTBr1W_9tppikBxAE_G6qjWdBljBHJ|
+|rin$skip    |0          |None                                              |Skip a song                                 |rin$skip                                                                                                                                   |
+|rin$stop    |0          |None                                              |Stop the song. (Clear the queue)            |rin$stop                                                                                                                                   |
+|rin$queue   |0          |None                                              |See the current queue                       |rin$queue                                                                                                                                  |
+|rin$volume  |0          |(Number {0-100})                                  |Set the volume, or get current volume       |rin$volume, rin$volume 100                                                                                                                 |
+|rin$loop    |0          |None                                              |Loop current queue                          |rin$loop                                                                                                                                   |
+|rin$shuffle |0          |None                                              |Shuffle Current Queue                       |rin$shuffle                                                                                                                                |
+
+###### Advertisement
+|Command Name|Power Level|Argument|Description               |Example    |
+|:----------:|:---------:|:------:|:-------------------------|:----------|
+|rin$invite  |0          |None    |Send you invite link!     |rin$invite |
+|rin$support |0          |None    |Send you the support link!|rin$support|
+
+
+###### Bot Owner
+|Command Name|Power Level|Argument                             |Description                                |Example                                                                                                  |
+|:----------:|:---------:|:-----------------------------------:|:------------------------------------------|:--------------------------------------------------------------------------------------------------------|
+|rin$reload  |4          |[-c/-e/-q, --command/--event/--queue]|Reload the bot!                            |rin$reload -c, rin$reload -e, rin$reload -q, rin$reload --command, rin$reload --event, rin$reload --queue|
+|rin$eval    |4          |[NodeJS Code]                        |Execute an NodeJS code and reply the output|rin$eval msg.channel.send("Hi");                                                                         |
+
 # Packages
 * [@discordjs/opus](https://www.npmjs.com/package/@discordjs/opus)
 * [bufferutil](https://www.npmjs.com/package/bufferutil)
@@ -85,6 +99,7 @@
 * [ytdl-core](https://www.npmjs.com/package/ytdl-core)
 * [ytpl](https://www.npmjs.com/package/ytpl)
 * [zlib-sync](https://www.npmjs.com/package/zlib-sync)
+* [yargs-parser](https://www.npmjs.com/package/yargs-parser)
 
 # How to host?
 
