@@ -9,6 +9,6 @@ before_install:
   - cd $TRAVIS_BUILD_DIR/src
   - npm config set spin false
 install:
-  - npm discord.js && npm ci
+  - npm i discord.js && npm ci
 script:
   - npm test
