@@ -2,7 +2,7 @@
 THIS FILE WAS BUILT FOR CI TO TEST IF THE SOURCE IS FUNCTION CORRECTLY.
 */
 
-let Discord = require("discord.js-light"),
+let Discord = require("discord.js"),
     os = require("os"),
     main = require("../main.js"),
     client = new Discord.Client({disableMentions : "everyone"}),
