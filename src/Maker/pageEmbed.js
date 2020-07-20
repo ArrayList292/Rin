@@ -64,7 +64,6 @@ class pageEmbedMaker {
         this.message.awaitReactions(filter, {max: 1, time: 60000, errors: ['time']})
             .then(collected => {
                 const reaction = collected.first();
-                reaction.remove(this.author.id);
                 if (reaction.emoji.name === '⬅') {
                     this.prevPage();
                 } else if (reaction.emoji.name === '🚪') {
@@ -98,7 +97,6 @@ class pageEmbedMaker {
         this.message.awaitReactions(filter, {max: 1, time: 60000, errors: ['time']})
             .then(collected => {
                 const reaction = collected.first();
-                reaction.remove(this.author.id);
                 if (reaction.emoji.name === '⬅') {
                     this.prevPage();
                 } else if (reaction.emoji.name === '🚪') {
@@ -142,7 +140,6 @@ class pageEmbedMaker {
                     msg.awaitReactions(filter, {max: 1, time: 60000, errors: ['time']})
                         .then(collected => {
                             const reaction = collected.first();
-                            reaction.remove(this.author.id);
                             if (reaction.emoji.name === '⬅') {
                                 this.prevPage();
                             } else if (reaction.emoji.name === '🚪') {
