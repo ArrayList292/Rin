@@ -82,7 +82,7 @@ fabric.properties
 modules.xml
 .idea/misc.xml
 *.ipr
-src/.env
-src/config.json
+.env
+config.json
 
 # End of https://www.toptal.com/developers/gitignore/api/webstorm+iml
