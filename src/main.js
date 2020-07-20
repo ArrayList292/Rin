@@ -93,6 +93,15 @@ class Function {
         });
     }
 
+    reloadCommand() {
+        commandManager();
+    }
+
+    reloadEvent() {
+        client.removeAllListeners();
+        eventManager();
+    }
+
 }
 
 /*
@@ -112,6 +121,7 @@ function eventManager() {
         if (eventAmount === 0) return;
         console.log(`[EventManager] Found ${eventAmount} events!`);
         res.forEach(e => {
+            delete require.cache[require.resolve(e)];
             let event = require(e);
             let eventName = e.replace("./Events/", "").replace(".js", "");
             if (!event.run) return console.log(`[EventManager] Event "${eventName}" doesn't have main function, Unloading it.`);
@@ -142,6 +152,7 @@ function commandManager() {
         if (commandAmount === 0) return;
         console.log(`[CommandManager] Found ${commandAmount} commands!`);
         res.forEach(c => {
+            delete require.cache[require.resolve(c)];
             let command = require(c);
             let commandName = c.replace("./Commands/", "").replace(".js", "");
             if (!command.run) return console.log(`[CommandManager] Command "${commandName}" doesn't have main function, Unloading it.`);
@@ -175,17 +186,11 @@ let makers = {
     embedMaker: require("./Maker/pageEmbed.js")
 };
 
-let managers = {
-    commandManager,
-    eventManager
-}
-
 let options = {
     commandList: commandList,
     queue: queue,
     config: config,
     maker: makers,
-    managers: managers,
     functions: new Function
 };
 
