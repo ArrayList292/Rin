@@ -136,8 +136,6 @@ function eventManager() {
 
 eventManager();
 
-let myEmbed = new MessageEmbed();
-
 /*
 End Of Event Manager
 */
